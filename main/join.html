@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <title>chungGongGang: join</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="join.js"></script>
+    <link rel="stylesheet" href="join.css" />
+</head>
+<body>
+<!--회원가입 창.-->
+<div id="whole" style="height:60px;"></div>
+<div>
+    <div id="left">
+        <h1><a href="mainpage.html" class="caption">충공갱</a></h1>
+        <form name="form" method="post">
+
+            <div id="join">
+                <table>
+                    <tr>
+                        <td>*아이디</td>
+                        <td><input type="text" name="id" class="input" autofocus required placeholder="아이디를 입력하시오" ></td>
+                    </tr>
+                    <tr>
+                        <td>*이름</td>
+                        <td><input type="text" name="name" class="input" required placeholder="이름을 입력하시오" ></td>
+                    </tr>
+                    <tr>
+                        <td>*비밀번호</td>
+                        <td><input type="password" name="password" class="input" required placeholder="비밀번호를 입력하시오" ></td>
+                    </tr>
+                    <tr>
+                        <td>*비밀번호 확인</td>
+                        <td><input type="password" name="passwordConfirm" class="input" required placeholder="비밀번호를 한 번 더 입력하시오" ></td>
+                    </tr>
+                    <tr>
+                        <td>*휴대폰 번호</td>
+                        <td><input type="text" name="phone" class="input" pattern="\d{2,3}-\d{3,4}-\d{4}" required placeholder="휴대폰 번호를 입력하시오"></td>
+                    </tr>
+                    <tr>
+                        <td>*이메일</td>
+                        <td><input type="email" name="email" class="input" autocomplete="off" required placeholder="이메일을 입력하시오"></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;&nbsp;생년월일</td>
+                        <td><input type="date" name="birthday" class="input"></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;&nbsp;관심분야</td>
+                        <td><input list="subject" name="subject" class="input">
+                            <datalist id="subject">
+                                <option value="개발">
+                                <option value="디자인">
+                                <option value="외국어">
+                            </datalist></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="회원가입" class = "submit" formaction="./index.html"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        <!--로그인창을 구현.-->
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+
+
+body{
+    border: 1px solid black;
+    height: 771.44px;
+}
+
+
+#caption{
+    grid-area:header;
+    height:59px;
+    font-size: 33px;
+
+}
+/*현재의 위치를 알려준다!(어느 메뉴에 들어와 있는지.)*/
+
+
+.info{
+    grid-area:info;
+}
+/*방문자 수*/
+
+table{
+    grid-area:table;
+    width: 100%;
+    border:1px solid black;
+}
+/*표!*/
+
+table caption{
+    padding : 5px;
+    font-weight:bold;
+}
+/*표 제목*/
+
+td, th, tr{
+    border-collapse: collapse;
+    border:1px solid black;
+}
+/*게시글(table) 선 속성.*/
+
+th, td{
+    height:36px;
+}
+
+.search{
+    grid-area:search;
+}
+/*검색옵션 grid위치*/
+
+#search_position{
+
+    float:right;
+}
+/*검색 옵션 위치를 우측으로 밀어버림.*/
+
+input{
+    height:30px;
+}
+

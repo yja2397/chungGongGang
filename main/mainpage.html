@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CNU information</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="./jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</head>
+
+<body>
+
+<div class="GridArea">
+
+    <div class="header">
+        <h1 id="header"> Here is header!</h1>
+    </div>
+    <!--헤더(메인홈페이지 제목)-->
+
+    <div class="main-menu-bar" id="menu">
+        <ul class="main-menu">
+            <li class="menus">공지사항
+                <ul>
+                    <li class="submenu"><a href="iframe.html" target="iframe">공지사항 모아보기</a></li>
+                    <li class="submenu"><a href="#">충남대 공지사항</a></li>
+                    <li class="submenu"><a href="#">기숙사 공지사항</a></li>
+                    <li class="submenu"><a href="#">SW 사업단 공지사항</a></li>
+                    <li class="submenu"><a href="#">컴퓨터공학과 공지사항</a></li>
+                </ul>
+
+            </li>
+
+            <li class="menus">키워드 알림
+                <ul>
+                    <li class="submenu"><a href="alarm.html" target="iframe">알림 설정</a></li>
+                    <li class="submenu"><a href="alarmconfirm.html" target="iframe">알림 확인</a></li>
+                </ul>
+            </li>
+
+            <li class="menus"><a href="making.html" target="iframe">만든이</a>
+
+            </li>
+
+            <li id="login" class="menus"><a href="login.html">로그인</a></li>
+            <!--로그인창은 외부 링크로 구현-->
+        </ul>
+
+    </div>
+    <!--헤더 아래의 드롭다운 메뉴-->
+    <div class="a"></div>
+    <div class="information_part">
+        <iframe src="iframe.html" name="iframe" scrolling="no"></iframe>
+    </div>
+
+    <!--메뉴중 공지사항 모아보기를 iframe에 출력. 링크를 가져왔음.-->
+    <div class="b"></div>
+    <div class="footer">
+        <p id="footerId">충공갱</p>
+        <p class="footerlink">
+            <a href="http://plus.cnu.ac.kr/html/kr/" target="_blank">충남대학교</a> |
+            <a href="http://dorm.cnu.ac.kr/html/kr/" target="_blank">닷옴</a> |
+            <a href="http://wise.cnu.ac.kr/" target="_blank">SW 중심대학 사업단</a> |
+            <a href="http://computer.cnu.ac.kr/" target="_blank">충남대학교 컴퓨터공학과</a>
+        </p>
+    </div>
+    <!--웹페이지 최하단을 구현.-->
+</div>
+
+</body>
+</html>

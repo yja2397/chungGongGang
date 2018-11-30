@@ -1,0 +1,52 @@
+/*login창(login.html)에 적용되는 css*/
+* {
+    font-family:'나눔고딕', '맑은 고딕';
+    background-color: #fffcf9;
+}
+
+.login{
+    text-align: center;
+    width: 300px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.caption {
+    text-decoration-line: none;
+    color: salmon;
+}
+
+.input {
+    width: 300px; height: 30px; background-color: white;
+}
+
+.submit {
+    width: 300px; height: 35px; background-color: lightsalmon; color: #fffcf9;
+    border: 0;
+}
+
+.submit:hover{
+    border: 1px solid indigo;
+}
+
+.sub{
+    display: grid;
+    grid: "l j";
+}
+
+.login_sub{
+    grid-area: l;
+    font-size: small;
+    color: indigo;
+    text-align: left;
+}
+
+.join{
+    grid-area: j;
+    margin: 1px 0 0 0;
+    font-size: small;
+    text-align: right;
+}

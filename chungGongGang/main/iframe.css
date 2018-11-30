@@ -1,0 +1,25 @@
+*{
+    height: 100%;
+}
+table{
+    width: 100%;
+}
+
+.search{
+    float: right;
+}
+
+input{
+    height: 30px;
+}
+button{
+    height: 30px;
+}
+#caption{
+    height: 59px;
+    font-size: 33px;
+}
+
+td{
+    height: 36px;
+}

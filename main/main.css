@@ -1,0 +1,127 @@
+.GridArea{
+    display: grid;
+    border: 1px solid black;
+    grid-template-rows: 200px 44px 771.44px 136.39px;
+    grid-template-areas: "header header header" "menubar menubar menubar" "a info b" "footer footer footer";
+    grid-gap: 5px;
+    margin :0 auto;
+    border-radius: 5px;
+    padding : 5px;
+
+}
+
+.a{
+    grid-area:a;
+    max-width: 429px;
+}
+
+.b{
+    grid-area:b;
+    max-width: 229px;
+}
+
+.header{
+    grid-area:header;
+    background-color: beige;
+    border: 1px solid black;
+    text-align:center;
+    border-radius: 5px;
+}
+/*header관련 css태그. 화면 최상단.*/
+
+.main-menu-bar{
+    grid-area:menubar;
+    background: salmon;
+    display: inline-block;
+    width: 100%;
+    padding:0 auto;
+}
+/*드롭다운 메뉴의 위치, 전체적 색상을 구현하는 css*/
+
+.main-menu {margin: 0; padding: 0; border:1px solid black;}
+
+.main-menu li {
+    float: left;
+    list-style:none;
+    position: relative;
+}
+
+.menus{
+    width:180px;
+    padding: 10px 20px;
+}
+.main-menu ul{
+    background: #eee;
+    border: 1px solid silver;
+    display: none;
+    padding-top: 5px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 220px;
+}
+.submenu{
+    display:none;}
+
+
+.menus:hover{
+    background:white;
+}
+
+.menus:hover > .menus ul{
+    display:block;
+    background-color: white;
+}
+
+.menus:hover > ul .submenu{
+    display:block;
+}
+
+.submenu:hover>a { color: salmon; }
+
+.submenu{
+    width:180px;
+    height: 41.6px;
+}
+
+.submenu a{
+    text-decoration: none;
+    color:black;
+}
+
+
+
+#login{
+    float : right;
+}
+/*메뉴창의 로그인 버튼을 우측으로 밀었음.*/
+
+.information_part{
+    grid-area:info;
+    background-color: beige;
+}
+/*메인홈페이지 중 모든 공지사항을 확인할 수 있는 화면의 배경색을 지정.*/
+
+.information_part iframe{
+    width: 100%;
+    height: 1000px;
+    border: none;
+}
+/*그 창엔 iframe으로 iframe.html을 출력한다. 크기, 선 속성을 지정.*/
+
+.footer{
+    grid-area:footer;
+    background-color: black;
+    color:salmon;
+}
+/*화면 최하단의 배경색, 그리드 위치, 폰트 색상을 지정함.*/
+
+#footerId{
+    font-size: 20px;
+}
+/*폰트 크기 지정. 특정 id의! : '충공갱'의 폰트 설정임.*/
+
+.footerlink a{
+    text-decoration: none;
+    color: #fffcf9;
+}

@@ -1,0 +1,31 @@
+/*join창(join.html)에 적용되는 css*/
+* {
+    font-family:'나눔고딕', '맑은 고딕';
+    background-color: #fffcf9;
+
+}
+
+#left{
+    width: 370px;
+    margin: auto;
+}
+
+.caption {
+    text-decoration-line: none;
+    color: salmon;
+    width: 150px;
+    margin: auto 115px;
+    font-size: 1.5em;
+}
+
+.submit {
+    width: 370px; height: 40px; background-color: lightsalmon; color: #fffcf9;
+    border: 0;
+    margin-top: 10px;
+}
+
+.input {
+    width: 250px; height: 25px; background-color: white;
+
+    margin-bottom: 5px;
+}
