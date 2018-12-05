@@ -46,10 +46,13 @@
     position: relative;
 }
 
-.menus{
-    width:180px;
+/*고친 코드///////////////////////////////////////////////*/
+li.menus{
+    width:auto;
     padding: 10px 20px;
 }
+/*////////////////////////////////////////////////////////*/
+
 .main-menu ul{
     background: #eee;
     border: 1px solid silver;
@@ -58,7 +61,6 @@
     position: absolute;
     left: 0;
     top: 100%;
-    width: 220px;
 }
 .submenu{
     display:none;}
