@@ -61,10 +61,10 @@ const parse = (url) => request(url, (error, response, body) => {
 
             category = $(this).find('thead').find('tr').find('th').text().trim();
 
-            console.log(`${category}`);
+            //console.log(`${category}`);
 
             tdArr.push($(this).find('tbody').find('tr').find('td').text().trim()); // 원 데이터 tdArr에 넣기
-            console.log(tdArr);
+
             tdArr = tdArr.filter(function(item){
                 return item !== '\t';
             }).map(function(item){
@@ -134,7 +134,7 @@ const parse = (url) => request(url, (error, response, body) => {
             }
             $('#table > tbody').append('</tr>');
         }*/
-        console.log(splits);
+        //console.log(splits);
 
         return splits;
     } catch (error) {
@@ -218,13 +218,19 @@ const parse2 = (url) => request(url, (error, response, body) => {
     }
 });
 
+console.log(parse());
 
 const sw="http://wise.cnu.ac.kr/community/notice";
 const dom = "https://dorm.cnu.ac.kr/_prog/_board/?code=sub05_0501&site_dvs_cd=kr&menu_dvs_cd=0501";
 const eng = "https://dream.cnu.ac.kr/bbs/list.php";
 
-parse(sw);
-parse2(dom);
+var s = new Array();
+s = parse(sw);
+
+console.log(s[1]);
+
+//parse(sw);
+//parse2(dom);
 
 /*app.get('/', (req, res) => {
     res.send('Hello World!');

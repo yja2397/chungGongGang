@@ -51,6 +51,11 @@ li.menus{
     width:auto;
     padding: 10px 20px;
 }
+
+.menus a{
+    text-decoration: none;
+    color: black;
+}
 /*////////////////////////////////////////////////////////*/
 
 .main-menu ul{
@@ -63,7 +68,8 @@ li.menus{
     top: 100%;
 }
 .submenu{
-    display:none;}
+    display:none;
+}
 
 
 .menus:hover{
