@@ -10,41 +10,41 @@
     margin: auto;
 }
 
-h1 {
+.login h1 {
     font-size: 3em;
 }
 
-.caption {
+.login.caption {
     text-decoration-line: none;
     color: salmon;
 }
 
-.input {
+.login.input {
     width: 300px; height: 30px; background-color: white;
 }
 
-.submit {
+.login.submit {
     width: 300px; height: 35px; background-color: lightsalmon; color: #fffcf9;
     border: 0;
 }
 
-.submit:hover{
+.login.submit:hover{
     border: 1px solid indigo;
 }
 
-.sub{
+.login.sub{
     display: grid;
     grid: "l j";
 }
 
-.login_sub{
+.login.login_sub{
     grid-area: l;
     font-size: small;
     color: indigo;
     text-align: left;
 }
 
-.join{
+.login.join{
     grid-area: j;
     margin: 1px 0 0 0;
     font-size: small;

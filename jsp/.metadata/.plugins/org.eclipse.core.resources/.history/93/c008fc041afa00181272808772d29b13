@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1> 전달받은 데이터 </h1>
+		<p>이름 : <%=request.getParameter("name") %></p>
+		<p>이메일 : <%=request.getParameter("email") %></p>
+		<p>아이디 : <%=request.getParameter("id") %></p>
+		<p>이메일 : <%=request.getParameter("email") %></p>
+</body>
+</html>

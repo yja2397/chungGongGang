@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+
+<%@include file ="/memberlogin/boguco/pages/join.html "%>
+<%-- 자바빈 클래스 import --%>      
+<%@ page import="jsp.member.model.MemberBean" %>  
+<%-- DAO import --%>   
+<%@ page import="jsp.member.model.MemberDAO" %> 
+
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>
