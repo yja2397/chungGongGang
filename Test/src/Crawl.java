@@ -1,4 +1,5 @@
 
+
 import java.io.IOException;
 import java.util.*;
 
@@ -9,6 +10,7 @@ public class Crawl{
 	
 	ArrayList<String> table;
 	ArrayList<String> tableA;
+	ArrayList<String> tableAHref;
 	String url;
 	String name;
 	
@@ -19,8 +21,11 @@ public class Crawl{
 		this.name = name;
 		this.url = url;
 		makeTable();
+		setAttr();
 		if(name == "cnu") {
 			cnuTable();
+		}else if(name == "cnu1") {
+			cnu1Table();
 		}else if(name == "dom") {
 			domTable();
 		}else if(name == "sw") {
@@ -51,9 +56,11 @@ public class Crawl{
 	
 	private void makeTable() throws IOException {
         Document doc = Jsoup.connect(url).get();
-        Elements elem = doc.select("table");
+        Elements elem = doc.select("table td");
         String str = elem.text();
+        System.out.println(str);
         this.table = new ArrayList<String>(Arrays.asList(str.split(" ")));
+        
         Elements elemA = doc.select("table a");
         String strA = elemA.text();
         this.tableA = new ArrayList<String>(Arrays.asList(strA.split(" ")));
@@ -71,8 +78,22 @@ public class Crawl{
         }
 	}
 	
+	public String printTable(String url) throws IOException {
+        Document doc = Jsoup.connect(url).get();
+        Elements elem = doc.select("table");
+        String str=elem.html();
+        System.out.println(str);
+        return str;
+	}
+	
 	public void cnuTable() {
 		for(int i=0; i<29; i++) {
+			table.remove(0);
+		}
+	}
+	
+	public void cnu1Table() {
+		for(int i=0; i<25; i++) {
 			table.remove(0);
 		}
 	}
@@ -83,6 +104,9 @@ public class Crawl{
 		}
 		for(int i=0; i<4; i++) {
 			tableA.remove(0);
+		}
+		for(int i=0; i<4; i++) {
+			tableAHref.remove(0);
 		}
 	}
 	
@@ -98,6 +122,9 @@ public class Crawl{
 		}
 		for(int i=0; i<5; i++) {
 			tableA.remove(0);
+		}
+		for(int i=0; i<5; i++) {
+			tableAHref.remove(0);
 		}
 	}
 	
@@ -125,8 +152,20 @@ public class Crawl{
 		}
 	}
 	
+	public void setAttr() throws IOException {
+		Document doc = Jsoup.connect(url).get();
+		Elements elemA = doc.select("table a");
+        String strA = elemA.outerHtml();
+        tableAHref = new ArrayList<String>(Arrays.asList(strA.split("\n")));
+		
+	}
+	
 	public ArrayList<String> getTable() throws IOException{
 		return table;
+	}
+	
+	public ArrayList<String> getAttr() throws IOException{
+		return tableAHref;
 	}
 	
 }

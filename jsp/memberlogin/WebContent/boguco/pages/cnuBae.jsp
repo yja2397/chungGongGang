@@ -129,8 +129,8 @@ Licence URI: https://www.os-templates.com/template-terms
 				<ul>
 					<li><a href="../index.html">Home</a></li>
 					<li><a>공지사항</a></li>
-					<li><a>충남대학교</a></li>
-					<li><a href="cnu.jsp">대학문화마당 공지사항</a></li>
+					<li><a>충남대 공지사항</a></li>
+					<li><a href="cnuBae.jsp">학사정보</a></li>
 				</ul>
 				<!-- ################################################################################################ -->
 			</div>
@@ -147,7 +147,7 @@ Licence URI: https://www.os-templates.com/template-terms
 		<main class="hoc container clear"> <!-- main body --> <!-- ################################################################################################ -->
 		<!-- ################################################################################################ -->
 		<div class="content">
-			<h1>대학문화마당 공지사항</h1>
+			<h1>학사정보</h1>
 			<!--사이트 공지사항-->
 			<div class="info">총 #### 건 / 금일 : ### 건</div>
 			<!--검색창-->
@@ -169,7 +169,7 @@ Licence URI: https://www.os-templates.com/template-terms
 			<br> <br> <br>
 			<div class="scrollable">
 				<table>
-					<!--공지사항 받아오는 표.-->
+					공지사항 받아오는 표.
 					<thead>
 						<th style="width: 8%">번호</th>
 						<th style="width: 57%">제목</th>
@@ -178,10 +178,9 @@ Licence URI: https://www.os-templates.com/template-terms
 						<th style="width: 8%">조회</th>
 					</thead>
 					<%
-						String url = "http://plus.cnu.ac.kr/_prog/_board/?code=sub07_070801&site_dvs_cd=kr&menu_dvs_cd=070801"; // url
+						String url = "http://plus.cnu.ac.kr/_prog/_board/?code=sub07_0702&site_dvs_cd=kr&menu_dvs_cd=0702"; // url
 						String table = t.printTable(url);
 						out.println(table);
-						System.out.println(table);
 						/* t.setting("cnu", url); // setting
 						ArrayList<String> table = t.getTable(); // table 받아오기
 						ArrayList<String> tableAHref = t.getAttr(); // table의 a tag 받아오기
@@ -196,69 +195,69 @@ Licence URI: https://www.os-templates.com/template-terms
 						<td style="width: 14%"><%=table.get(i * 5 + 3)%></td>
 						<td style="width: 8%"><%=table.get(i * 5 + 4)%></td>
 						<!--for문으로 table에 입력-->
-					</tr> --%>
+					</tr>
 
 					<%
-						/* } */
-					%>
-					</table>
+						}
+					%> --%>
+				</table>
 			</div>
 
 		</div>
-					<!-- ################################################################################################ -->
-					<!-- / main body -->
-					<div class="clear"></div>
+		<!-- ################################################################################################ -->
+		<!-- / main body -->
+		<div class="clear"></div>
 		</main>
+	</div>
+	<!-- ################################################################################################ -->
+	<!-- ################################################################################################ -->
+	<!-- ################################################################################################ -->
+	<!-- Footer Background Image Wrapper -->
+	<!--유정연 : footer-->
+	<div class="bgded overlay"
+		style="background-image: url('../images/demo/backgrounds/04.png');">
 		<!-- ################################################################################################ -->
 		<!-- ################################################################################################ -->
 		<!-- ################################################################################################ -->
-		<!-- Footer Background Image Wrapper -->
-		<!--유정연 : footer-->
-		<div class="bgded overlay"
-			style="background-image: url('../images/demo/backgrounds/04.png');">
-			<!-- ################################################################################################ -->
-			<!-- ################################################################################################ -->
-			<!-- ################################################################################################ -->
-			<!-- ################################################################################################ -->
-			<nav class="quicklinks row4">
-				<ul class="hoc clear">
-					<li><a href="../index.html"><i class="fa fa-lg fa-home"></i></a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="http://plus.cnu.ac.kr/html/kr/">CNU</a></li>
-					<li><a href="http://dorm.cnu.ac.kr/html/kr/">Domitory</a></li>
-					<li><a href="http://wise.cnu.ac.kr/">SW</a></li>
-					<li><a href="http://computer.cnu.ac.kr/">Computer</a></li>
-				</ul>
-			</nav>
-			<!-- ################################################################################################ -->
-			<!-- ################################################################################################ -->
-			<!-- ################################################################################################ -->
-			<div class="wrapper row5">
-				<div id="copyright" class="hoc clear">
-					<!-- ################################################################################################ -->
-					<p class="fl_left">
-						Copyright &copy; 2018 - All Rights Reserved - <a
-							href="../index.html">ChungGongGang</a>
-					</p>
-					<p class="fl_right">
-						Template by <a target="_blank"
-							href="https://www.os-templates.com/"
-							title="Free Website Templates">OS Templates</a>
-					</p>
-					<!-- ################################################################################################ -->
-				</div>
+		<!-- ################################################################################################ -->
+		<nav class="quicklinks row4">
+			<ul class="hoc clear">
+				<li><a href="../index.html"><i class="fa fa-lg fa-home"></i></a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="http://plus.cnu.ac.kr/html/kr/">CNU</a></li>
+				<li><a href="http://dorm.cnu.ac.kr/html/kr/">Domitory</a></li>
+				<li><a href="http://wise.cnu.ac.kr/">SW</a></li>
+				<li><a href="http://computer.cnu.ac.kr/">Computer</a></li>
+			</ul>
+		</nav>
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<div class="wrapper row5">
+			<div id="copyright" class="hoc clear">
+				<!-- ################################################################################################ -->
+				<p class="fl_left">
+					Copyright &copy; 2018 - All Rights Reserved - <a
+						href="../index.html">ChungGongGang</a>
+				</p>
+				<p class="fl_right">
+					Template by <a target="_blank" href="https://www.os-templates.com/"
+						title="Free Website Templates">OS Templates</a>
+				</p>
+				<!-- ################################################################################################ -->
 			</div>
-			<!-- ################################################################################################ -->
 		</div>
-		<!-- End Footer Background Image Wrapper -->
 		<!-- ################################################################################################ -->
-		<!-- ################################################################################################ -->
-		<!-- ################################################################################################ -->
-		<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
-		<!-- JAVASCRIPTS -->
-		<script src="../layout/scripts/jquery.min.js"></script>
-		<script src="../layout/scripts/jquery.backtotop.js"></script>
-		<script src="../layout/scripts/jquery.mobilemenu.js"></script>
-		<script src="../layout/scripts/jquery.flexslider-min.js"></script>
+	</div>
+	<!-- End Footer Background Image Wrapper -->
+	<!-- ################################################################################################ -->
+	<!-- ################################################################################################ -->
+	<!-- ################################################################################################ -->
+	<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+	<!-- JAVASCRIPTS -->
+	<script src="../layout/scripts/jquery.min.js"></script>
+	<script src="../layout/scripts/jquery.backtotop.js"></script>
+	<script src="../layout/scripts/jquery.mobilemenu.js"></script>
+	<script src="../layout/scripts/jquery.flexslider-min.js"></script>
 </body>
 </html>

@@ -10,6 +10,7 @@ public class Crawl{
 	
 	ArrayList<String> table;
 	ArrayList<String> tableA;
+	ArrayList<String> tableAHref;
 	String url;
 	String name;
 	
@@ -20,6 +21,7 @@ public class Crawl{
 		this.name = name;
 		this.url = url;
 		makeTable();
+		setAttr();
 		if(name == "cnu") {
 			cnuTable();
 		}else if(name == "dom") {
@@ -32,6 +34,14 @@ public class Crawl{
 			table.add("게시물이 존재하지 않습니다.");
 		}
 		tableRemoveA();
+	}
+	
+	public String printTable(String url) throws IOException {
+        Document doc = Jsoup.connect(url).get();
+        Elements elem = doc.select("tbody");
+        String str=elem.html();
+        System.out.println(str);
+        return str;
 	}
 	
 	public void setName(String name) {
@@ -85,6 +95,9 @@ public class Crawl{
 		for(int i=0; i<4; i++) {
 			tableA.remove(0);
 		}
+		for(int i=0; i<4; i++) {
+			tableAHref.remove(0);
+		}
 	}
 	
 	public void swTable() {
@@ -99,6 +112,9 @@ public class Crawl{
 		}
 		for(int i=0; i<5; i++) {
 			tableA.remove(0);
+		}
+		for(int i=0; i<5; i++) {
+			tableAHref.remove(0);
 		}
 	}
 	
@@ -126,8 +142,20 @@ public class Crawl{
 		}
 	}
 	
+	public void setAttr() throws IOException {
+		Document doc = Jsoup.connect(url).get();
+		Elements elemA = doc.select("table a");
+        String strA = elemA.outerHtml();
+        tableAHref = new ArrayList<String>(Arrays.asList(strA.split("\n")));
+		
+	}
+	
 	public ArrayList<String> getTable() throws IOException{
 		return table;
+	}
+	
+	public ArrayList<String> getAttr() throws IOException{
+		return tableAHref;
 	}
 	
 }
