@@ -169,7 +169,7 @@ Licence URI: https://www.os-templates.com/template-terms
 			<br> <br> <br>
 			<div class="scrollable">
 				<table>
-					공지사항 받아오는 표.
+					<!-- 공지사항 받아오는 표 -->
 					<thead>
 						<th style="width: 8%">번호</th>
 						<th style="width: 57%">제목</th>

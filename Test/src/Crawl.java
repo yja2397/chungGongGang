@@ -24,8 +24,6 @@ public class Crawl{
 		setAttr();
 		if(name == "cnu") {
 			cnuTable();
-		}else if(name == "cnu1") {
-			cnu1Table();
 		}else if(name == "dom") {
 			domTable();
 		}else if(name == "sw") {
@@ -37,6 +35,30 @@ public class Crawl{
 		}
 		tableRemoveA();
 	}
+	
+	public String printTable(String url) throws IOException {
+        Document doc = Jsoup.connect(url).get();
+        Elements elem = doc.select("tbody");
+        String str=elem.html();
+        str = str.replace("<td class=\"t_end\">&nbsp;</td>", "");
+		str = str.replace("<td class=\"t_end\"><img src=\"/_prog/_board/skin/rwd/img/file_icon.gif\" alt=\"파일있음\">&nbsp;</td>", "");
+		str = str.replace("<td class=\"center t_end\">&nbsp;</td>", "");
+		str = str.replace("<td class=\"center t_end\"><img src=\"/_prog/_board/skin/rwd/img/file_icon.gif\" alt=\"파일있음\">&nbsp;</td>", "");
+        str = str.replace("<td> <span class=\"select itx\"> <select name=\"search_target\"> <option value=\"title_content\">제목+내용</option><option value=\"title\">제목</option><option value=\"content\">내용</option><option value=\"comment\">댓글</option><option value=\"user_name\">이름</option><option value=\"nick_name\">닉네임</option><option value=\"user_id\">아이디</option><option value=\"tag\">태그</option> </select> </span> </td", "");
+        str = str.replace("<td class=\"itx_wrp\"> <input type=\"text\" name=\"search_keyword\" value=\"\" class=\"itx srch_itx\"> </td>", "");
+        str = str.replace("<td> <button type=\"submit\" onclick=\"jQuery(this).parents('form').submit();return false\" class=\"bd_btn\">검색</button> </td>", "");
+        str = str.replace("<td><a href=\"http://computer.cnu.ac.kr/index.php?mid=guide_personal\">개인정보 처리방침</a></td>", "");
+        str = str.replace("<td><a href=\"http://computer.cnu.ac.kr/index.php?mid=guide_email\">이메일 무단수집거부</a></td>", "");
+        str = str.replaceAll("<td><a href=\"http://computer.cnu.ac.kr/index.php?mid=int_map\">찾아오시는 길</a></td> ", "");
+        str = str.replace("<td></td>", "");
+        
+        Elements elem2 = doc.select(".t_end");
+        String str2 = elem2.html();
+        ArrayList<String> strs = new ArrayList<String>(Arrays.asList(str2.split("&nbsp;")));
+		return str;
+	}
+	
+	
 	
 	public void setName(String name) {
 		this.name = name;
@@ -56,11 +78,9 @@ public class Crawl{
 	
 	private void makeTable() throws IOException {
         Document doc = Jsoup.connect(url).get();
-        Elements elem = doc.select("table td");
+        Elements elem = doc.select("table");
         String str = elem.text();
-        System.out.println(str);
         this.table = new ArrayList<String>(Arrays.asList(str.split(" ")));
-        
         Elements elemA = doc.select("table a");
         String strA = elemA.text();
         this.tableA = new ArrayList<String>(Arrays.asList(strA.split(" ")));
@@ -78,22 +98,8 @@ public class Crawl{
         }
 	}
 	
-	public String printTable(String url) throws IOException {
-        Document doc = Jsoup.connect(url).get();
-        Elements elem = doc.select("table");
-        String str=elem.html();
-        System.out.println(str);
-        return str;
-	}
-	
 	public void cnuTable() {
 		for(int i=0; i<29; i++) {
-			table.remove(0);
-		}
-	}
-	
-	public void cnu1Table() {
-		for(int i=0; i<25; i++) {
 			table.remove(0);
 		}
 	}

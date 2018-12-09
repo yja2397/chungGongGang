@@ -181,7 +181,6 @@ Licence URI: https://www.os-templates.com/template-terms
 						String url = "http://plus.cnu.ac.kr/_prog/_board/?code=sub07_070801&site_dvs_cd=kr&menu_dvs_cd=070801"; // url
 						String table = t.printTable(url);
 						out.println(table);
-						System.out.println(table);
 						/* t.setting("cnu", url); // setting
 						ArrayList<String> table = t.getTable(); // table 받아오기
 						ArrayList<String> tableAHref = t.getAttr(); // table의 a tag 받아오기
