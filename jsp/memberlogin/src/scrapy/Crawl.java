@@ -51,6 +51,11 @@ public class Crawl{
         str = str.replace("<td><a href=\"http://computer.cnu.ac.kr/index.php?mid=guide_email\">이메일 무단수집거부</a></td>", "");
         str = str.replaceAll("<td><a href=\"http://computer.cnu.ac.kr/index.php?mid=int_map\">찾아오시는 길</a></td> ", "");
         str = str.replace("<td></td>", "");
+        str = str.replace("<td> </td>", "");
+        str = str.replace("<td> <span></span> </td>", "");
+        str = str.replace("<td> </td> \r\n" + 
+        		" <td> <span></span> </td>", "");
+        str = str.replace("<td><a href=\"http://computer.cnu.ac.kr/index.php?mid=int_map\">찾아오시는 길</a></td>", "");
         
         Elements elem2 = doc.select(".t_end");
         String str2 = elem2.html();
@@ -164,8 +169,8 @@ public class Crawl{
 	
 	public void setAttr() throws IOException {
 		Document doc = Jsoup.connect(url).get();
-		Elements elemA = doc.select("table a");
-        String strA = elemA.outerHtml();
+		Elements elemA = doc.select("table td.title");
+        String strA = elemA.html();
         tableAHref = new ArrayList<String>(Arrays.asList(strA.split("\n")));
 		
 	}

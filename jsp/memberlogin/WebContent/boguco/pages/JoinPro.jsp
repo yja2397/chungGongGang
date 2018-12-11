@@ -19,71 +19,8 @@
 </head>
 <body>
 	<!--유정연 : jsp파일 전체적인 css관리. ->상단부 , 하단부 링크 추가-->
-	<div class="wrapper row1">
-		<header id="header" class="hoc clear">
-			<!-- ################################################################################################ -->
-			<div id="logo" class="fl_left">
-				<h1>
-					<a href="../index.html" style="font-weight: bold">충공갱</a>
-				</h1>
-				<!--사이트 이름-->
-			</div>
-			<nav id="mainav" class="fl_right">
-				<ul class="clear">
-					<li class="active"><a href="index.html">Home</a></li>
-					<!--첫 화면-->
-					<li><a class="drop">공지사항</a>
-                        <ul>
-                            <li class="drop"><a href="cnu.jsp">충남대 공지사항</a>
-                                <ul>
-                                    <li><a href="cnuNew.jsp">새소식</a></li>
-                                    <li><a href="cnuBae.jsp">학사정보</a></li>
-                                    <li><a href="cnuEdu.jsp">교육정보</a></li>
-                                    <li><a href="cnu.jsp">대학문화마당</a></li>
-                                </ul>
-                            </li>
-                            <li class="drop"><a href="dom.jsp">기숙사 공지사항</a>
-                                <ul>
-                                    <li><a href="dom.jsp">은행사</a></li>
-                                    <li><a href="domBac.jsp">백행사</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="sw.jsp">SW 사업단 공지사항</a></li>
-                            <li class="drop"><a href="com.jsp">컴퓨터공학과 공지사항</a>
-                                <ul>
-                                    <li><a href="comBae.jsp">학사정보</a></li>
-                                    <li><a href="comBac.jsp">일반소식</a></li>
-                                    <li><a href="com.jsp">사업단소식</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-					<li><a class="drop">키워드 알림</a> <!--키워드 알림 메뉴-->
-						<ul>
-							<li class="submenu"><a href="alarm.html" target="iframe">알림
-									설정</a></li>
-							<!--알림 설정-->
-							<li class="submenu"><a href="alarmconfirm.html"
-								target="iframe">알림 확인</a></li>
-							<!--알림 확인-->
-						</ul></li>
-				</ul>
-				<form action="#">
-					<select><option selected="selected" value="">MENU</option>
-						<option value="index.html">Home</option>
-						<option>공지사항</option>
-						<option value="notice.html">- - 충남대 공지사항</option>
-						<option value="#">- - 기숙사 공지사항</option>
-						<option value="#">- - SW 사업단 공지사항</option>
-						<option value="#">- - 컴퓨터공학과 공지사항</option>
-						<option>키워드 알림</option>
-						<option value="alarm.html">- - 알림 설정</option>
-						<option value="alarmconfirm.html">- - 알림 확인</option></select>
-				</form>
-			</nav>
-			<!-- 여기까지가 메인페이지 윗 드롭다운 메뉴 설정. -->
-		</header>
-	</div>
+	<!--유정연 : 메뉴가 포함된 상단을 include-->
+	<%@include file="dropdown.jsp"%>
 	<!-- id파라미터는 id 프로퍼티로 적용하는 등 각각의 요소들을 모두 지정할 수 있다.-->
 	<jsp:useBean id="memberBean" class="memberlogin.memberBean" />
 	<jsp:setProperty property="*" name="memberBean" />

@@ -7,8 +7,9 @@ public class main {
 		System.out.println(cnu.getTable());
 		*/
 		Crawl dom = new Crawl();
+		dom.setting("dom","http://dorm.cnu.ac.kr/_prog/_board/?code=sub05_0501&site_dvs_cd=kr&menu_dvs_cd=0501");
+		System.out.println(dom.table);
 		
-		dom.printTable("http://dorm.cnu.ac.kr/_prog/_board/?code=sub05_0501&site_dvs_cd=kr&menu_dvs_cd=0501");
 		
 		/*
 		Crawl sw = new Crawl();
