@@ -18,7 +18,7 @@ Licence URI: https://www.os-templates.com/template-terms
 <html>
 <!--윤지애 : 탭 이름-->
 <head>
-<title>CNU information | Notice</title>
+<title>CNU information | CNU</title>
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -27,12 +27,16 @@ Licence URI: https://www.os-templates.com/template-terms
 	type="text/css" media="all">
 </head>
 <body id="top">
-
+	<!-- ################################################################################################ -->
+	<!-- ################################################################################################ -->
+	<!-- ################################################################################################ -->
 	<!-- ################################################################################################ -->
 	<!--유정연 : 최상단 include-->
 	<%@include file="Upper_part.jsp"%>
-
-
+	
+	<!-- ################################################################################################ -->
+	<!-- ################################################################################################ -->
+	<!-- ################################################################################################ -->
 	<!-- Top Background Image Wrapper -->
 	<!--유정연 : 메뉴가 포함된 상단-->
 	<div class="bgded overlay"
@@ -40,16 +44,17 @@ Licence URI: https://www.os-templates.com/template-terms
 		<!-- ################################################################################################ -->
 		<!--유정연 : 메뉴가 포함된 상단을 include-->
 		<%@include file="dropdown.jsp"%>
-
+		
 		<!--윤지애 : 세부 메뉴-->
+
 		<div class="wrapper row2">
 			<div id="breadcrumb" class="hoc clear">
 				<!-- ################################################################################################ -->
 				<ul>
 					<li><a href="../index.html">Home</a></li>
 					<li><a>공지사항</a></li>
-					<li><a>컴퓨터공학과 공지사항</a></li>
-					<li><a href="comBac.jsp">일반정보</a>
+					<li><a>충남대 공지사항</a></li>
+					<li><a href="cnuEdu.jsp">교육정보</a></li>
 				</ul>
 				<!-- ################################################################################################ -->
 			</div>
@@ -57,31 +62,17 @@ Licence URI: https://www.os-templates.com/template-terms
 		<!-- ################################################################################################ -->
 	</div>
 	<!-- End Top Background Image Wrapper -->
-
+	<!-- ################################################################################################ -->
+	<!-- ################################################################################################ -->
+	<!-- ################################################################################################ -->
 	<!--윤지애 : 공지사항 크롤링-->
 	<div class="wrapper row3">
-		<main class="hoc container clear"> <!-- main body -->
+
+		<main class="hoc container clear"> <!-- main body --> <!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
 		<div class="content">
-			<h1>일반정보</h1>
+			<h1><a href="http://plus.cnu.ac.kr/_prog/_board/?code=sub07_0704&site_dvs_cd=kr&menu_dvs_cd=0704">교육정보</a></h1> <!-- 누르면 충남대학교 교육정보 홈페이지로 들어간다. -->
 			<!--사이트 공지사항-->
-			<div class="info">총 #### 건 / 금일 : ### 건</div>
-			<!--검색창-->
-			<div class="search" style="grid-area: search">
-				<form action="#" method="post" id="search_position"
-					style="float: right">
-					<input list="search" name="subject" class="input" size="22"
-						style="float: left">
-					<datalist id="search" value="제목">
-						<option>제목</option>
-						<option>내용</option>
-						<option>작성자</option>
-					</datalist>
-					<!--제목/내용/작성자를 기준으로 검색할 수 있음.-->
-					&nbsp;&nbsp;&nbsp; <input type="text" size="22" style="float: left">&nbsp;&nbsp;&nbsp;
-					<button style="float: left">검색</button>
-				</form>
-			</div>
-			<br> <br> <br>
 			<div class="scrollable">
 				<table>
 					<!-- 공지사항 받아오는 표. -->
@@ -93,27 +84,10 @@ Licence URI: https://www.os-templates.com/template-terms
 						<th style="width: 8%">조회</th>
 					</thead>
 					<%
-						String url = "http://computer.cnu.ac.kr/index.php?mid=gnotice"; // 컴퓨터공학과 일반정보 공지사항 받아오기
+						String url = "http://plus.cnu.ac.kr/_prog/_board/?code=sub07_0704&site_dvs_cd=kr&menu_dvs_cd=0704"; // 충남대학교 교육정보  url
 						String table = t.printTable(url);
-						System.out.println(table);
 						out.println(table);
-						/* t.setting("com", url); // setting
-						ArrayList<String> table = t.getTable(); // table 받아오기
-						ArrayList<String> tableAHref = t.getAttr(); // table의 a tag 받아오기
-						for (int i = 0; i < 8; i++) { */
 					%>
-
-					<%-- <tr>
-						<td style="width: 8%"><%=table.get(i * 5 + 0)%></td>
-						<td style="width: 57%"><%=tableAHref.get(i)%></td>
-						<td style="width: 13%"><%=table.get(i * 5 + 2)%></td>
-						<td style="width: 14%"><%=table.get(i * 5 + 3)%></td>
-						<td style="width: 8%"><%=table.get(i * 5 + 4)%></td>
-					</tr>
-
-					<%
-						}
-					%> --%>
 				</table>
 			</div>
 
@@ -123,8 +97,11 @@ Licence URI: https://www.os-templates.com/template-terms
 		<div class="clear"></div>
 		</main>
 	</div>
-
+	<!-- ################################################################################################ -->
+	<!-- ################################################################################################ -->
+	<!-- ################################################################################################ -->
 	<!-- Footer Background Image Wrapper -->
+	
 	<!--유정연 : footer를 include-->
 	<%@include file="Under_part.jsp"%>
 

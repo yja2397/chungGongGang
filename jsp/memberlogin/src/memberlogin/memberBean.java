@@ -1,7 +1,10 @@
+/*출처: http://all-record.tistory.com/110?category=733042 [세상의 모든 기록]*/
+
 package memberlogin;
 
 public class memberBean {
 
+	// 유정연 : 사용하는 변수에 맞게 bean 변수를 설정하였다!
 	// getParameter()를 이용해 넘겨진 파라미터 값을 얻어올 수 있다.
 	// 파라미터 값을 얻을때 name= 에 지정해둔 값과 동일한 값을 인자로 지정해야 된다.
 	private String id;

@@ -9,7 +9,7 @@ Licence URI: https://www.os-templates.com/template-terms
 <html>
 <!--윤지애 : 탭 이름-->
 <head>
-    <title>CNU information | About</title>
+    <title>CNU information | Alarm</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!--외부 소스 : 외부 css 연결-->
@@ -106,7 +106,8 @@ Licence URI: https://www.os-templates.com/template-terms
             <!-- ################################################################################################ -->
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="join.html">Join</a></li>
+                <li><a>키워드 알림</a></li>
+                <li><a href="alarm.html">알림 설정</a></li>
             </ul>
             <!-- ################################################################################################ -->
         </div>
@@ -117,31 +118,39 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<!--윤지애 : 회원가입-->
+<!--윤지애 : 알림 설정-->
 <div class="wrapper row3">
     <main class="hoc container clear">
         <!-- main body -->
         <!-- ################################################################################################ -->
-        <h1>회원가입</h1><!--회원가입-->
-        <div id="join">
-            <form name="form" method="post" action="JoinPro.jsp">
-            
-                <p>*아이디&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="id" class="input" autofocus required placeholder="아이디를 입력하시오"></p>
-                <p>*이름&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name" class="input" required placeholder="이름을 입력하시오" ></p>
-                <p>*비밀번호&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password" class="input" required placeholder="비밀번호를 입력하시오" ></p>
-                <p>*비밀번호 확인&nbsp;&nbsp;<input type="password" name="passwordConfirm" class="input" required placeholder="비밀번호를 한 번 더 입력하시오" ></p>
-                <p>*휴대폰 번호&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="phone" class="input" pattern="\d{2,3}-\d{3,4}-\d{4}" required placeholder="휴대폰 번호를 입력하시오"></p>
-                <p>*이메일&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" name="email" class="input" autocomplete="off" required placeholder="이메일을 입력하시오"></p>
-                <p>&nbsp;&nbsp;생년월일&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="birthday" class="input"></p>
-                <p>&nbsp;&nbsp;관심분야&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input list="subject" name="subject" class="input">
-                    <datalist id="subject">
-                        <option value="개발">
-                        <option value="디자인">
-                        <option value="외국어">
-                    </datalist></p>
-                <p><input type="submit" value="회원가입" class = "submit"></p>
+        <h1>알림 설정</h1><!--회원가입-->
+        <div id="alarm">
+            <form name="form" method="post" action="alarmPro.jsp">
+                <p class="formcaption">게시판</p>
+                    <select id="search" class="input">
+                        <option value="cnuNew">충남대학교 새소식</option>
+                        <option value="cnuBae">충남대학교 학사정보</option>
+                        <option value="cnuEdu">충남대학교 교육정보</option>
+                        <option value="cnu">충남대학교 대학문화마당</option>
+                        <option value="dom">기숙사 은행사</option>
+                        <option value="domBac">기숙사 백행사</option>
+                        <option value="sw">SW 사업단 공지사항</option>
+                        <option value="comBae">컴퓨터공학과 학사정보</option>
+                        <option value="comBac">컴퓨터공학과 일반소식</option>
+                        <option value="com">컴퓨터공학과 사업단소식</option>
+                    </select>
+                <br>
+                <p class="formcaption">알림 방식</p>
+                <div class="sub"><div class="newtext">새로운 글</div><input class="new" type="radio" name="radio" value="new">&nbsp;&nbsp;
+                <div class="keywordtext">키워드 검색</div>&nbsp;<input class="keyword" type="radio" name="radio" value="keyword"></div>
+                <br>
+                <p class="formcaption">키워드&nbsp;<span style="font-size: small">(예 : 공모전, 대회, 장학금)</span></p>
+                <input type="text"class="input" >
+                <br>
+                <input type="submit" value="확인" class = "submit">
             </form>
         </div>
+        <div style="height: 100px";></div>
         <!-- ################################################################################################ -->
         <!-- / main body -->
         <div class="clear"></div>

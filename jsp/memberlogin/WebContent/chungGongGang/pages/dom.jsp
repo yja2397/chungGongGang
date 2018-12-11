@@ -29,29 +29,23 @@ Licence URI: https://www.os-templates.com/template-terms
 <body id="top">
 	<!--유정연 : 최상단 include-->
 	<%@include file="Upper_part.jsp"%>
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
+
 	<!-- Top Background Image Wrapper -->
 	<!--유정연 : 메뉴가 포함된 상단-->
 	<div class="bgded overlay"
 		style="background-image: url('../images/demo/backgrounds/01.png');">
-		<!-- ################################################################################################ -->
-	
 		<!--유정연 : 메뉴가 포함된 상단을 include-->
 		<%@include file="dropdown.jsp"%>
-		<!-- ################################################################################################ -->
-		<!-- ################################################################################################ -->
-		<!-- ################################################################################################ -->
+		
 		<!--윤지애 : 세부 메뉴-->
-
 		<div class="wrapper row2">
 			<div id="breadcrumb" class="hoc clear">
 				<!-- ################################################################################################ -->
 				<ul>
 					<li><a href="../index.html">Home</a></li>
 					<li><a>공지사항</a></li>
-					<li><a href="sw.jsp">사업단 공지사항</a></li>
+					<li><a>기숙사 공지사항</a></li>
+					<li><a href="dom.jsp">은행사</a></li>
 				</ul>
 				<!-- ################################################################################################ -->
 			</div>
@@ -68,26 +62,8 @@ Licence URI: https://www.os-templates.com/template-terms
 		<main class="hoc container clear"> <!-- main body --> <!-- ################################################################################################ -->
 		<!-- ################################################################################################ -->
 		<div class="content">
-			<h1>SW중심대학사업단 공지사항</h1>
+			<h1><a href="https://dorm.cnu.ac.kr/_prog/_board/?code=sub05_0501&site_dvs_cd=kr&menu_dvs_cd=0501">은행사</a></h1> <!-- 기숙사 은행사 공지사항 홈페이지 받아오기 -->
 			<!--사이트 공지사항-->
-			<div class="info">총 #### 건 / 금일 : ### 건</div>
-			<!--검색창-->
-			<div class="search" style="grid-area: search">
-				<form action="#" method="post" id="search_position"
-					style="float: right">
-					<input list="search" name="subject" class="input" size="22"
-						style="float: left">
-					<datalist id="search" value="제목">
-						<option>제목</option>
-						<option>내용</option>
-						<option>작성자</option>
-					</datalist>
-					<!--제목/내용/작성자를 기준으로 검색할 수 있음.-->
-					&nbsp;&nbsp;&nbsp; <input type="text" size="22" style="float: left">&nbsp;&nbsp;&nbsp;
-					<button style="float: left">검색</button>
-				</form>
-			</div>
-			<br> <br> <br>
 			<div class="scrollable">
 				<table>
 					<!-- 공지사항 받아오는 표. -->
@@ -97,33 +73,27 @@ Licence URI: https://www.os-templates.com/template-terms
 						<th style="width: 13%">작성자</th>
 						<th style="width: 14%">작성일</th>
 						<th style="width: 8%">조회</th>
-					</thead>
+					</thead><!-- table head -->
 					<%
-						String url = "http://wise.cnu.ac.kr/community/notice"; //url
-						String table = t.printTable(url);
-						out.println(table);
-						/* t.setting("sw", url); // setting
-						ArrayList<String> table = t.getTable(); // table 받아오기
-						ArrayList<String> tableAHref = t.getAttr(); // table의 a tag(제목) 받아오기
-						for (int i = 0; i < 8; i++) { // for문으로 table 받아오기 */
+						String url = "https://dorm.cnu.ac.kr/_prog/_board/?code=sub05_0501&site_dvs_cd=kr&menu_dvs_cd=0501"; // 기숙사 은행사 url
+						t.setting("dom", url); // setting
+						ArrayList<String> table = t.getTable(); // table 가져오기.
+						ArrayList<String> tableAHref = t.getAttr(); // 제목 table 가져오기.
+						for (int i = 0; i < 8; i++) {  // 8개 목록만 가져오기.
 					%>
 
-					<%-- <tr>
+					 <tr>
 						<td style="width: 8%"><%=table.get(i * 5 + 0)%></td>
-						<!-- 번호 -->
-						<td style="width: 57%"><%=tableAHref.get(i)%></td>
-						<!--제목. a tag는 따로 받아오기.-->
+						<td style="width: 57%"><%=tableAHref.get(i)%></td> <!-- table의 제목은 따로 가져온다. -->
 						<td style="width: 13%"><%=table.get(i * 5 + 2)%></td>
-						<!--작성자-->
 						<td style="width: 14%"><%=table.get(i * 5 + 3)%></td>
-						<!--작성일-->
 						<td style="width: 8%"><%=table.get(i * 5 + 4)%></td>
-						<!--조회-->
+						<!--for문으로 table에 입력.-->
 					</tr>
 
 					<%
 						}
-					%> --%>
+					%>
 				</table>
 			</div>
 
@@ -133,12 +103,10 @@ Licence URI: https://www.os-templates.com/template-terms
 		<div class="clear"></div>
 		</main>
 	</div>
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<!-- Footer Background Image Wrapper -->
 	
+	<!-- Footer Background Image Wrapper -->
 	<!--유정연 : footer를 include-->
 	<%@include file="Under_part.jsp"%>
+	
 </body>
 </html>

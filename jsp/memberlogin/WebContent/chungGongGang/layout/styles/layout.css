@@ -85,6 +85,9 @@ h1, h2, h3, h4, h5, h6, .heading{font-family:"FontAwesome";}
 .excerpt .heading{margin:0 0 30px 0;}
 .excerpt p:last-of-type{margin:0; padding:0;}
 
+/*윤지애 : 페이지 제목*/
+main h1 { margin : 0 0 20px 0; color: #43BFCB; font-weight: bold; }
+
 /*윤지애 : Search*/
 . form{display:block; width:100%;}
 .search input{width:130px; padding:10px; height: 35px; border:1px solid lightgray; margin: 3px;}
@@ -105,6 +108,20 @@ h1, h2, h3, h4, h5, h6, .heading{font-family:"FontAwesome";}
 .login .sub{	display: grid;	grid: "l j";}
 .login .login_sub{	grid-area: l;	font-size: small;	color: indigo;	text-align: left;}
 .login .join{	grid-area: j;	margin: 1px 0 0 0;	font-size: small;	text-align: right;}
+
+/*윤지애 : Alarm */
+#alarm{		width: 300px;	margin: auto;}
+#alarm h1 {	font-size: 3em;}
+#alarm .caption {	text-decoration-line: none;	color: salmon;}
+#alarm .input {	width: 300px; height: 35px; background-color: white;}
+#alarm .submit:hover{color:#FFFFFF; background-color:#43BFCB; border-color:#43BFCB;}
+#alarm .submit{width: 300px; height: 40px; border: 1px solid black; color:inherit; background-color:transparent; border-color:inherit;}
+#alarm .sub{	display: flex; font-size: 15px	}
+#alarm .sub > .new{float: left}
+#alarm .sub > .newtext{float: left}
+#alarm .sub > .keyword{ margin: 1px 0 0 0;	float:left}
+#alarm .sub > .keywordtext{float: left}
+#alarm .formcaption{font-size:1.3em;}
 
 /* 윤지애 : Join*/
 #join{	width: 414px;	margin: auto;}

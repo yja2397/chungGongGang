@@ -64,11 +64,9 @@ Licence URI: https://www.os-templates.com/template-terms
 
 					<li><a class="drop">키워드 알림</a> <!--키워드 알림 메뉴-->
 						<ul>
-							<li class="submenu"><a href="alarm.html" target="iframe">알림
-									설정</a></li>
+							<li class="submenu"><a href="alarm.html">알림 설정</a></li>
 							<!--알림 설정-->
-							<li class="submenu"><a href="alarmconfirm.html"
-								target="iframe">알림 확인</a></li>
+							<li class="submenu"><a href="alarmconfirm.html">알림 확인</a></li>
 							<!--알림 확인-->
 						</ul></li>
 				</ul>

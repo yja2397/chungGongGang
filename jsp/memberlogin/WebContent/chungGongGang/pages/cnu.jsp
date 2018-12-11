@@ -66,58 +66,28 @@ Licence URI: https://www.os-templates.com/template-terms
 		<main class="hoc container clear"> <!-- main body --> <!-- ################################################################################################ -->
 		<!-- ################################################################################################ -->
 		<div class="content">
-			<h1>대학문화마당 공지사항</h1>
+			<h1><a href="http://plus.cnu.ac.kr/_prog/_board/?code=sub07_070801&site_dvs_cd=kr&menu_dvs_cd=070801">대학문화마당 공지사항</a></h1> <!-- 누르면 대학문화마당 공지사항 홈페이지로 이동된다. -->
 			<!--사이트 공지사항-->
-			<div class="info">총 #### 건 / 금일 : ### 건</div>
-			<!--검색창-->
-			<div class="search" style="grid-area: search">
-				<form action="#" method="post" id="search_position"
-					style="float: right">
-					<input list="search" name="subject" class="input" size="22"
-						style="float: left">
-					<datalist id="search" value="제목">
-						<option>제목</option>
-						<option>내용</option>
-						<option>작성자</option>
-					</datalist>
-					<!--제목/내용/작성자를 기준으로 검색할 수 있음.-->
-					&nbsp;&nbsp;&nbsp; <input type="text" size="22" style="float: left">&nbsp;&nbsp;&nbsp;
-					<button style="float: left">검색</button>
-				</form>
-			</div>
-			<br> <br> <br>
 			<div class="scrollable">
 				<table>
-					<!--공지사항 받아오는 표.-->
+					<!--충남대학교 대학문화마당 공지사항 받아오는 표.-->
 					<thead>
 						<th style="width: 8%">번호</th>
 						<th style="width: 57%">제목</th>
 						<th style="width: 13%">작성자</th>
 						<th style="width: 14%">작성일</th>
 						<th style="width: 8%">조회</th>
-					</thead>
+					</thead> <!-- 표 head. -->
 					<%
-						String url = "http://plus.cnu.ac.kr/_prog/_board/?code=sub07_070801&site_dvs_cd=kr&menu_dvs_cd=070801"; // url
-						String table = t.printTable(url);
-						out.println(table);
-						/* t.setting("cnu", url); // setting
-						ArrayList<String> table = t.getTable(); // table 받아오기
-						ArrayList<String> tableAHref = t.getAttr(); // table의 a tag 받아오기
-						for (int i = 0; i < 8; i++) { */
-					%>
-
-					<%-- <tr>
-						<td style="width: 8%"><%=table.get(i * 5 + 0)%></td>
-						<td style="width: 57%"><%=tableAHref.get(i)%></td>
-						<!--a tag는 따로 받아오기.-->
-						<td style="width: 13%"><%=table.get(i * 5 + 2)%></td>
-						<td style="width: 14%"><%=table.get(i * 5 + 3)%></td>
-						<td style="width: 8%"><%=table.get(i * 5 + 4)%></td>
-						<!--for문으로 table에 입력-->
-					</tr> --%>
-
-					<%
-						/* } */
+						String url = "http://plus.cnu.ac.kr/_prog/_board/?code=sub07_070801&site_dvs_cd=kr&menu_dvs_cd=070801"; // 충남대학교 대학문화마당 url
+						String table = t.printTable(url); // printTable을 통해 tag를 받아온다.
+						out.println(table); // table을 print한다.
+						var title = document.getElementsbyTagName("tbody a");
+						title.forEach(function(element){
+							href = "http://plus.cnu.ac.kr/_prog/_board" + title.getAttribute("href");
+							System.out.println(href);
+							element.setAttribute("href", href);
+						});
 					%>
 					</table>
 			</div>
