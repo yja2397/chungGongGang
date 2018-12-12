@@ -76,8 +76,9 @@ Licence URI: https://www.os-templates.com/template-terms
 					</thead>
 					<%
 						String url = "http://computer.cnu.ac.kr/index.php?mid=notice"; // 컴퓨터공학과 사업단 공지사항 받아오기
-						String table = t.printTable(url);
-						out.println(table);
+						String table = t.printTable(url); // printTable을 통해 tag를 받아온다.
+						table = t.printStr("com"); // href 바꾸고 target _blank로 바꿈.
+						out.println(table); // table을 print한다.
 					%>
 				</table>
 			</div>

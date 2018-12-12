@@ -64,7 +64,7 @@ Licence URI: https://www.os-templates.com/template-terms
 		<main class="hoc container clear"> <!-- main body --> <!-- ################################################################################################ -->
 		<!-- ################################################################################################ -->
 		<div class="content">
-			<h1><a href="https://dorm.cnu.ac.kr/_prog/_board/?code=sub05_0506&site_dvs_cd=kr&menu_dvs_cd=0506">백행사</a></h1> <!-- 누르면 기숙사 백행사 공지사항으로 이동. -->
+			<h1><a target="_blank" href="https://dorm.cnu.ac.kr/_prog/_board/?code=sub05_0506&site_dvs_cd=kr&menu_dvs_cd=0506">백행사</a></h1> <!-- 누르면 기숙사 백행사 공지사항으로 이동. -->
 			<!--사이트 공지사항-->
 			<div class="scrollable">
 				<table>

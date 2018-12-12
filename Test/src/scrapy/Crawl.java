@@ -76,25 +76,19 @@ public class Crawl{
 		return str; // tag가 포함된 string을 반환한다. 이것을 출력하면 표가 그대로 출력된다.
 	}
 	
-	public void goToA() { // 충남대학교 홈페이지의 경로 올바르게 지정하기. 새 창에서 공지 뜨게 하기.
+	public void goToA() {
 		str = str.replace("href=\"./?", "target=\"_blank\" href=\"http://plus.cnu.ac.kr/_prog/_board/?");
 	}
 	
-	public void goToB() { // 소프트웨어중심대학사업단 홈페이지의 경로 올바르게 지정하기. 새 창에서 공지 뜨게 하기.
+	public void goToB() {
 		str = str.replace("href=\"/community", "target=\"_blank\" href=\"http://wise.cnu.ac.kr/community");
-	}
-	
-	public void goToC() {
-		str = str.replace("href=", "target=\"_blank\" href=");
 	}
 	
 	public String printStr(String name) {
 		if(name == "cnu")
 			goToA();
-		else if(name == "sw")
-			goToB();
 		else
-			goToC();
+			goToB();
 		return str;
 	}
 	
@@ -155,8 +149,8 @@ public class Crawl{
 		for(int i=0; i<4; i++) {
 			tableAHref.remove(0); // 불필요한 것 지우기.
 		}
-		for(int i = 0; i < tableAHref.size(); i++) { // 기숙사 홈페이지의 경로 올바르게 지정하기. 새 창에서 공지 뜨게 하기.
-			tableAHref.set(i,tableAHref.get(i).replace("href=\"./?", "target=\"_blank\" href=\"http://dorm.cnu.ac.kr/_prog/_board/?"));
+		for(int i = 0; i < tableAHref.size(); i++) {
+			tableAHref.set(i,tableAHref.get(i).replace("href=\"./?", "target=\"_blank\" href=\"http://dorm.cnu.ac.kr/_prog/_board/?")); // 기숙사 홈페이지의 경로 올바르게 지정하기. 새 창에서 공지 뜨게 하기.
 		}
 	}
 	

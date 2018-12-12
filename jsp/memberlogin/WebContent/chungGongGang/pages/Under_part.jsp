@@ -1,4 +1,4 @@
-<!-- 유정연 : iclude를 위한 상 하부를 따로 관리 -->
+<!-- 유정연 : iclude를 위한 상 하부를 따로 관리하기 위해 jsp파일을 작성 -->
 
 <!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
@@ -9,6 +9,8 @@ Author URI: https://www.os-templates.com/
 Licence: Free to use under our free template licence terms
 Licence URI: https://www.os-templates.com/template-terms
 -->
+
+<!-- 윤지애 : 세부 메뉴 구현 -->
 <head>
 <meta charset="utf-8">
 <meta name="viewport"

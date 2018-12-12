@@ -1,6 +1,6 @@
 
 <!--출처: http://all-record.tistory.com/110?category=733042 [세상의 모든 기록]  -->
-<!-- 위 출처를 바탕으로 상황에 맞도록 작성함. -->
+<!-- 유정연 : 위 출처를 바탕으로 상황에 맞도록 작성함. -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,6 +10,7 @@
 %>
 <!-- 작성한 빈을 가져오는 코드! -->
 <%@ page import="memberlogin.memberBean"%>
+<%@ page import="memberlogin.SaveData"%>
 <html>
 <head>
 <link href="../layout/styles/layout.css" rel="stylesheet"
@@ -23,11 +24,16 @@
 	<%@include file="dropdown.jsp"%>
 	<!-- id파라미터는 id 프로퍼티로 적용하는 등 각각의 요소들을 모두 지정할 수 있다.-->
 	<jsp:useBean id="memberBean" class="memberlogin.memberBean" />
+	<jsp:useBean id="save" class="memberlogin.SaveData" /> <!-- database에 저장하기 위한 클래스 호출 -->
 	<jsp:setProperty property="*" name="memberBean" />
+	
+	<%	/* 윤지애 : 데이터베이스에 회원가업 정보 데이터 저장. */
+		save.dataSave(memberBean); // 회원 정보를담고 있는 memberBean을 database 테이블에 저장한다.
+	%>
 	<div class="wrapper row3">
 		<main class="hoc container clear"> <!-- main body --> <!-- ################################################################################################ -->
 		<h1>회원가입 확인</h1>
-		<!--회원가입 확인 코드!-->
+		<!--회원가입 확인 코드! bean의 getter setter를 통해 저장된 회원 정보를 확인할 수 있게 구현하였다.-->
 		<div id="join">
 			<div id="wrapper">
 				<br> <br> <b><font size="5" color="gray">회원가입
@@ -59,6 +65,7 @@
 						<td><%=memberBean.getPhone()%></td>
 					</tr>
 					<tr>
+					<!-- 유정연 : 흥미사항 추가. (로그인 구현 화면에 맞게 table을 원본에서 수정함) -->
 						<td id="title">흥미사항</td>
 						<td><%=memberBean.getSubject()%></td>
 					</tr>

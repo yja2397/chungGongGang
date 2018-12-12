@@ -88,8 +88,8 @@ Licence URI: https://www.os-templates.com/template-terms
 
                     <li><a class="drop">키워드 알림</a><!--키워드 알림 메뉴-->
                         <ul>
-                            <li class="submenu"><a href="alarm.html" target="iframe">알림 설정</a></li><!--알림 설정-->
-                            <li class="submenu"><a href="alarmconfirm.html" target="iframe">알림 확인</a></li><!--알림 확인-->
+                            <li class="submenu"><a href="alarm.html">알림 설정</a></li><!--알림 설정-->
+                            <li class="submenu"><a href="alarmconfirm.html">알림 확인</a></li><!--알림 확인-->
                         </ul>
                     </li>
                 </ul>
@@ -125,9 +125,9 @@ Licence URI: https://www.os-templates.com/template-terms
         <!-- ################################################################################################ -->
         <h1>알림 설정</h1><!--회원가입-->
         <div id="alarm">
-            <form name="form" method="post" action="alarmPro.jsp">
+            <form name="form">
                 <p class="formcaption">게시판</p>
-                    <select id="search" class="input">
+                    <select id="search" class="input" name="notice_board">
                         <option value="cnuNew">충남대학교 새소식</option>
                         <option value="cnuBae">충남대학교 학사정보</option>
                         <option value="cnuEdu">충남대학교 교육정보</option>
@@ -141,11 +141,11 @@ Licence URI: https://www.os-templates.com/template-terms
                     </select>
                 <br>
                 <p class="formcaption">알림 방식</p>
-                <div class="sub"><div class="newtext">새로운 글</div><input class="new" type="radio" name="radio" value="new">&nbsp;&nbsp;
-                <div class="keywordtext">키워드 검색</div>&nbsp;<input class="keyword" type="radio" name="radio" value="keyword"></div>
+                <div class="sub"><div class="newtext">새로운 글</div><input class="new" type="radio" name="system" value="new">&nbsp;&nbsp;
+                <div class="keywordtext">키워드 검색</div>&nbsp;<input class="keyword" type="radio" name="system" value="keyword"></div>
                 <br>
                 <p class="formcaption">키워드&nbsp;<span style="font-size: small">(예 : 공모전, 대회, 장학금)</span></p>
-                <input type="text"class="input" >
+                <input type="text"class="input" name="keyword">
                 <br>
                 <input type="submit" value="확인" class = "submit">
             </form>

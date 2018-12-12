@@ -75,8 +75,9 @@ Licence URI: https://www.os-templates.com/template-terms
 					</thead> <!-- 표 head. -->
 					<%
 						String url = "http://plus.cnu.ac.kr/_prog/_board/?code=sub07_0702&site_dvs_cd=kr&menu_dvs_cd=0702"; // url
-						String table = t.printTable(url); // table string으로 받아오기
-						out.println(table); // 표 출력
+						String table = t.printTable(url); // printTable을 통해 tag를 받아온다.
+						table = t.printStr("cnu"); // href 바꾸고 target _blank로 바꿈.
+						out.println(table); // table을 print한다.
 					%>
 				</table>
 			</div>

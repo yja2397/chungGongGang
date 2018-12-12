@@ -1,4 +1,13 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+	request.setCharacterEncoding("UTF-8");
+	//한글 깨짐 방지를 위한 코드.
+%>
+<!-- 작성한 빈을 가져오는 코드! -->
+<%@ page import="alarm.alarm"%>
+<%@ page import="alarm.alarmData"%>
 <!--
 Template Name: Boguco
 Author: <a href="https://www.os-templates.com/">OS Templates</a>
@@ -9,7 +18,7 @@ Licence URI: https://www.os-templates.com/template-terms
 <html>
 <!--윤지애 : 탭 이름-->
 <head>
-    <title>CNU information | About</title>
+    <title>CNU information | Alarm</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!--외부 소스 : 외부 css 연결-->
@@ -54,11 +63,11 @@ Licence URI: https://www.os-templates.com/template-terms
         <header id="header" class="hoc clear">
             <!-- ################################################################################################ -->
             <div id="logo" class="fl_left">
-                <h1><a href="../index.html" style="font-weight: bold">충공갱</a></h1><!--사이트 이름-->
+                <h1><a href="../index.html" style="font-weight: bold">충공갱</a></h1><!--페이지 이름-->
             </div>
             <nav id="mainav" class="fl_right">
                 <ul class="clear">
-                    <li class="active"><a href="index.html">Home</a></li><!--첫 화면-->
+                    <li class="active"><a href="../index.html">Home</a></li><!--첫 화면-->
                     <li><a class="drop">공지사항</a>
                         <ul>
                             <li class="drop"><a href="cnu.jsp">충남대 공지사항</a>
@@ -106,7 +115,8 @@ Licence URI: https://www.os-templates.com/template-terms
             <!-- ################################################################################################ -->
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="notice.html">ABOUT</a></li>
+                <li><a>키워드 알림</a></li>
+                <li><a href="alarmConfirm.html">알림 확인</a></li>
             </ul>
             <!-- ################################################################################################ -->
         </div>
@@ -117,36 +127,39 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<!--윤지애 : 개발자 정보-->
+
+	<jsp:useBean id="alarm" class="alarm.alarm" />
+	<jsp:useBean id="save" class="alarm.alarmData" /> <!-- database에 저장하기 위한 클래스 호출 -->
+	<jsp:setProperty property="*" name="alarm" />
+
+	<%	/* 윤지애 : 데이터베이스에 알람 설정 정보 데이터 저장. */
+		save.dataSave(memberBean); // 회원 정보를담고 있는 memberBean을 database 테이블에 저장한다.
+	%>
+	
+<!--윤지애 : 알림 확인-->
 <div class="wrapper row3">
     <main class="hoc container clear">
         <!-- main body -->
         <!-- ################################################################################################ -->
-        <div class="developer content">
-            <!-- ################################################################################################ -->
-            <h1>개발자 정보</h1><!--사이트 공지사항-->
-            <!-- #############################################################################-->
-            <div id="yeon">
-                <img class="imgr borderedbox inspace-5" src="../images/demo/imgr.gif" style="width: 200px; margin-right:80px;"alt="">
-                <p style="font-size: 20px;"><strong>유정연</strong></p>
-                <p>충남대학교 환경공학과 환경ict 16학번</p>
-                <p>call : 010-2264-8359</p>
-                <p>mail : dbwjddus19@gmail.com</p>
-                <p>site : <a href="http://yjyblogstudyit.tistory.com/">JungYeon Blog</a></p>
-                <p>gitHub : <a href="https://github.com/Yeon1123">JungYeon Git</a></p>
-            </div>
-            <br>
-            <br>
-            <img class="imgl borderedbox inspace-5" src="../images/demo/imgl.gif" style="width: 200px;" alt="">
-            <div id="ae" style="float:right; margin-right:80px">
-                <p style="font-size: 20px;"><strong>윤지애</strong></p>
-                <p>충남대학교 정보통계학과 언어정보처리전공 16학번</p>
-                <p>call : 010-2264-8359</p>
-                <p>mail : dbwjddus19@gmail.com</p>
-                <p>site : <a href="http://blog.naver.com/yja0203">JIAE Blog</a></p>
-                <p>gitHub : <a href="https://github.com/yja2397">JIAE Git</a></p>
-            </div>
-        </div>
+        <h1>알림 확인</h1>
+        <table>
+
+            <thead>
+            <th>번호</th>
+            <th>게시판</th>
+            <th>알림방식</th>
+            <th>키워드</th>
+            <th>설정날짜</th>
+            <th>삭제</th>
+            </thead>
+
+            <% 
+            	for(int i=0; i < alarm.getList().size(); i++)
+            		out.println(alarm.getList().get(i)); 
+            %>
+            
+        </table>
+        <div style="height: 150px";></div>
         <!-- ################################################################################################ -->
         <!-- / main body -->
         <div class="clear"></div>

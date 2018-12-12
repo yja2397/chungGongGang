@@ -62,7 +62,7 @@ Licence URI: https://www.os-templates.com/template-terms
 		<main class="hoc container clear"> <!-- main body --> <!-- ################################################################################################ -->
 		<!-- ################################################################################################ -->
 		<div class="content">
-			<h1><a href="https://dorm.cnu.ac.kr/_prog/_board/?code=sub05_0501&site_dvs_cd=kr&menu_dvs_cd=0501">은행사</a></h1> <!-- 기숙사 은행사 공지사항 홈페이지 받아오기 -->
+			<h1><a target="_blank" href="https://dorm.cnu.ac.kr/_prog/_board/?code=sub05_0501&site_dvs_cd=kr&menu_dvs_cd=0501">은행사</a></h1> <!-- 기숙사 은행사 공지사항 홈페이지 받아오기 -->
 			<!--사이트 공지사항-->
 			<div class="scrollable">
 				<table>

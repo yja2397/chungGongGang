@@ -81,13 +81,8 @@ Licence URI: https://www.os-templates.com/template-terms
 					<%
 						String url = "http://plus.cnu.ac.kr/_prog/_board/?code=sub07_070801&site_dvs_cd=kr&menu_dvs_cd=070801"; // 충남대학교 대학문화마당 url
 						String table = t.printTable(url); // printTable을 통해 tag를 받아온다.
+						table = t.printStr("cnu"); // href 바꾸고 target _blank로 바꿈.
 						out.println(table); // table을 print한다.
-						var title = document.getElementsbyTagName("tbody a");
-						title.forEach(function(element){
-							href = "http://plus.cnu.ac.kr/_prog/_board" + title.getAttribute("href");
-							System.out.println(href);
-							element.setAttribute("href", href);
-						});
 					%>
 					</table>
 			</div>
@@ -101,7 +96,7 @@ Licence URI: https://www.os-templates.com/template-terms
 		<!-- ################################################################################################ -->
 		<!-- ################################################################################################ -->
 		<!-- Footer Background Image Wrapper -->
-		<!--유정연 : footer-->
+		<!--유정연 : footer를 include하였다.-->
 		<%@include file="Under_part.jsp" %>
 </body>
 </html>

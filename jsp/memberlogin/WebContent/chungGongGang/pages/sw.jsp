@@ -83,6 +83,7 @@ Licence URI: https://www.os-templates.com/template-terms
 					<%
 						String url = "http://wise.cnu.ac.kr/community/notice"; //url
 						String table = t.printTable(url);
+						table = t.printStr("sw"); // href 바꾸고 target _blank로 바꿈.
 						out.println(table);
 					%>
 				</table>
