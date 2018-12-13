@@ -31,13 +31,13 @@ Licence URI: https://www.os-templates.com/template-terms
 			<!-- ################################################################################################ -->
 			<div id="logo" class="fl_left">
 				<h1>
-					<a href="../index.html" style="font-weight: bold">충공갱</a>
+					<a href="../index.jsp" style="font-weight: bold">충공갱</a>
 				</h1>
 				<!--사이트 이름-->
 			</div>
 			<nav id="mainav" class="fl_right">
 				<ul class="clear">
-					<li class="active"><a href="../index.html">Home</a></li>
+					<li class="active"><a href="../index.jsp">Home</a></li>
 					<!--첫 화면-->
 					<li><a class="drop">공지사항</a>
 						<ul>
@@ -64,9 +64,9 @@ Licence URI: https://www.os-templates.com/template-terms
 
 					<li><a class="drop">키워드 알림</a> <!--키워드 알림 메뉴-->
 						<ul>
-							<li class="submenu"><a href="alarm.html">알림 설정</a></li>
+							<li class="submenu"><a href="alarm.jsp">알림 설정</a></li>
 							<!--알림 설정-->
-							<li class="submenu"><a href="alarmconfirm.html">알림 확인</a></li>
+							<li class="submenu"><a href="alarmconfirm.jsp">알림 확인</a></li>
 							<!--알림 확인-->
 						</ul></li>
 				</ul>

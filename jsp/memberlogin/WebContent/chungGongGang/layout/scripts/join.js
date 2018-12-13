@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	/*윤지애 : 회원가입 javascript*/
 
     // 회원가입 버튼 클릭
     $('.submit').click(function(){

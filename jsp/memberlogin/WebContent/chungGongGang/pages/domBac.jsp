@@ -5,7 +5,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
 	import="java.util.*"%>
 
-<jsp:useBean id="t" class="scrapy.Crawl" scope="page" />
+<jsp:useBean id="t" class="source.Crawl" scope="page" />
 <jsp:setProperty name="t" property="*" />
 <!DOCTYPE html>
 <!--

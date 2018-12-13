@@ -36,12 +36,12 @@ Licence URI: https://www.os-templates.com/template-terms
 			</div>
 			<div class="fl_right">
 				<ul class="nospace">
-					<li><a href="../index.html"><i class="fa fa-lg fa-home"></i></a></li>
-					<li><a href="about.html">About</a></li>
+					<li><a href="../index.jsp"><i class="fa fa-lg fa-home"></i></a></li>
+					<li><a href="about.jsp">About</a></li>
 					<!--개발자 정보-->
-					<li><a href="login.html">Login</a></li>
+					<li><a href="login.jsp">Login</a></li>
 					<!--로그인-->
-					<li><a href="join.html">Register</a></li>
+					<li><a href="join.jsp">Register</a></li>
 					<!--회원가입-->
 				</ul>
 			</div>

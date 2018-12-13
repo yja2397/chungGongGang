@@ -34,12 +34,12 @@ Licence URI: https://www.os-templates.com/template-terms
 	<!-- ################################################################################################ -->
 	<nav class="quicklinks row4">
 		<ul class="hoc clear">
-			<li><a href="../index.html"><i class="fa fa-lg fa-home"></i></a></li>
-			<li><a href="about.html">About</a></li>
-			<li><a href="http://plus.cnu.ac.kr/html/kr/">CNU</a></li>
-			<li><a href="http://dorm.cnu.ac.kr/html/kr/">Domitory</a></li>
-			<li><a href="http://wise.cnu.ac.kr/">SW</a></li>
-			<li><a href="http://computer.cnu.ac.kr/">Computer</a></li>
+			<li><a href="../index.jsp"><i class="fa fa-lg fa-home"></i></a></li>
+			<li><a target="_blank" href="about.jsp">About</a></li>
+			<li><a target="_blank" href="http://plus.cnu.ac.kr/html/kr/">CNU</a></li>
+			<li><a target="_blank" href="http://dorm.cnu.ac.kr/html/kr/">Domitory</a></li>
+			<li><a target="_blank" href="http://wise.cnu.ac.kr/">SW</a></li>
+			<li><a target="_blank" href="http://computer.cnu.ac.kr/">Computer</a></li>
 		</ul>
 	</nav>
 	<!-- ################################################################################################ -->
@@ -50,7 +50,7 @@ Licence URI: https://www.os-templates.com/template-terms
 			<!-- ################################################################################################ -->
 			<p class="fl_left">
 				Copyright &copy; 2018 - All Rights Reserved - <a
-					href="../index.html">ChungGongGang</a>
+					href="../index.jsp">ChungGongGang</a>
 			</p>
 			<p class="fl_right">
 				Template by <a target="_blank" href="https://www.os-templates.com/"

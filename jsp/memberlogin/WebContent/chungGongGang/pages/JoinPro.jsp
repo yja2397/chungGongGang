@@ -9,8 +9,8 @@
 	//한글 깨짐 방지를 위한 코드.
 %>
 <!-- 작성한 빈을 가져오는 코드! -->
-<%@ page import="memberlogin.memberBean"%>
-<%@ page import="memberlogin.SaveData"%>
+<%@ page import="source.memberBean"%>
+<%@ page import="source.SaveData"%>
 <html>
 <head>
 <link href="../layout/styles/layout.css" rel="stylesheet"
@@ -23,8 +23,8 @@
 	<!--유정연 : 메뉴가 포함된 상단을 include-->
 	<%@include file="dropdown.jsp"%>
 	<!-- id파라미터는 id 프로퍼티로 적용하는 등 각각의 요소들을 모두 지정할 수 있다.-->
-	<jsp:useBean id="memberBean" class="memberlogin.memberBean" />
-	<jsp:useBean id="save" class="memberlogin.SaveData" /> <!-- database에 저장하기 위한 클래스 호출 -->
+	<jsp:useBean id="memberBean" class="source.memberBean" />
+	<jsp:useBean id="save" class="source.SaveData" /> <!-- database에 저장하기 위한 클래스 호출 -->
 	<jsp:setProperty property="*" name="memberBean" />
 	
 	<%	/* 윤지애 : 데이터베이스에 회원가업 정보 데이터 저장. */
@@ -72,8 +72,7 @@
 				</table>
 				<br>
 				<!--버튼을 누르면 로그인창으로 이동한다-->
-				<a href="join.html"> <input type="button" value="확인"
-					class="submit"></a>
+				<a href="join.jsp"> <input type="button" value="확인"class="submit" ></a>
 			</div>
 		</div>
 		<!-- ################################################################################################ -->
@@ -83,8 +82,8 @@
 	</div>
 	<nav class="quicklinks row4">
 		<ul class="hoc clear">
-			<li><a href="../index.html"><i class="fa fa-lg fa-home"></i></a></li>
-			<li><a href="about.html">About</a></li>
+			<li><a href="../index.jsp"><i class="fa fa-lg fa-home"></i></a></li>
+			<li><a href="about.jsp">About</a></li>
 			<li><a href="http://plus.cnu.ac.kr/html/kr/">CNU</a></li>
 			<li><a href="http://dorm.cnu.ac.kr/html/kr/">Domitory</a></li>
 			<li><a href="http://wise.cnu.ac.kr/">SW</a></li>
