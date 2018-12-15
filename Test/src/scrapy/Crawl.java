@@ -215,4 +215,11 @@ public class Crawl{
 		return tableAHref;
 	}
 	
+	public String getCnuPaginate() throws IOException {
+		Document doc = Jsoup.connect(url).get();
+		Elements elemA = doc.select(".paginate");
+		String strA = elemA.html();
+		return strA;
+	}
+	
 }
